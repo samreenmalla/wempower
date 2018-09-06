@@ -1,39 +1,46 @@
-<!DOCTYPE html>
-<html>
-<header class="bg-image">
-  <div class="container">
-    <h1>WEMPOWER</h1>
-    <h2>We stand for women.</h2>
-    <%= link_to 'Sign Up Now!',new_user_registration_path, class:'btn btn-transparent' %>
-
+<header>
+    <div class="jumbotron text-center my-5">
+      <h1 class="display-4">WEMPOWER</h1>
+      <p class="lead">We stand for women.</p>
+      <hr class="my-4">
+      <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+      <p class="lead">
+        <%= link_to 'Sign Up Now!',new_user_registration_path, class:' btn btn-primary btn-lg' %>
+      </p>
   </div>
 </header>
 
-<section class="">
+<section class="my-4">
   <div class="container">
-    <div class="col-3 text--center">
-			<%= image_tag("wempower.jpg") %>
-		</div>
-		 <div class="col-7 details">
-      <h3>You are awesome.</h3>
-      <p>Women empower women. Let's come together and share our ideas, creations, happiness as well as problems. We are all here for you.</p>
+    <div class="row">
+      <div class="col-5">
+  			<%= image_tag "wempower.jpg", class: "img-fluid" %>
+  		</div>
+  		 <div class="col-7 text-center p-4">
+        <h3>You are awesome.</h3>
+        <p>Women empower women. Let's come together and share our ideas, creations, happiness as well as problems. We are all here for you.</p>
+      </div>
     </div>
 	</div>
 </section>
 
 <section class="section--primary">
-  <div class="container">
-    <div class="col-md-3 features">
-     <i class="fa fa-heart"></i>
-     <h6><strong>DONATE!!</strong></h6>
-    </div>
-			<div class="col-md-6" >
-				<p>Your donations help us save more than 30% girls. Girls who are not able to access the basic rights of sanitation are being helped by your kindness.Your small donation means a lot to someone who is in need</p>
+  <div class="card card-body bg-light mt-5 text-center">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-4 features">
+          <i class="fa fa-heart"></i>
+          <h6><strong>DONATE!!</strong></h6>
+        </div>
+  			<div class="col-md-8" >
+  				<p>Your donations help us save more than 30% girls. Girls who are not able to access the basic rights of sanitation are being helped by your kindness.Your small donation means a lot to someone who is in need</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section--primary--alt ">
+<section class="section--primary--alt text-center my-3">
   <div class="container">
     <p>A revelation leaps over the borders of the everyday. </br> A life without revelation is no life at all</p>
       <%# <div class="col-md-8">
@@ -43,21 +50,23 @@
 </section>
 
 <section class="section--primary--alt bg-image bg-image-2">
-  <div class="container text--center">
-    <h3>Reasons to join us:</h3>
-    <div class="col-8 text--middle">
-      <ul>
-        <li>We are the best way to connect</li>
-        <li>You can help girls in need</li>
-        <li>You are safe</li>
-        <li>WHo run the world? Girls!</li>
-        <li>Its free!</li>
-      </ul>
+  <div class="card card-body bg-light mt-5 text-center">
+    <div class="container text-center">
+      <h3>Reasons to join us:</h3>
+      <div>
+        <ul class="list-group">
+          <li class="list-group-item">We are the best way to connect</li>
+          <li class="list-group-item">You can help girls in need</li>
+          <li class="list-group-item">You are safe</li>
+          <li class="list-group-item">WHo run the world? Girls!</li>
+          <li class="list-group-item">Its free!</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<footer>
+<footer class="footer">
   <div class="container">
     <ul>
       <li><a href="#">Impressum</a></li>
@@ -67,4 +76,3 @@
     <p>&copy; Running since 2018. Wempower. All rights reserved.</p>
   </div>
 </footer>
-</html>

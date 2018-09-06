@@ -1,22 +1,21 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$primary-font: 'Pacifico', cursive;
-$secondary-font: 'Dosis', sans-serif;
+$primary-font: "Pacifico", cursive;
+$secondary-font: "Dosis", sans-serif;
 
-body{
+body {
   padding: 60px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
-
 
 /**---------SHARE IDEAS POST AREA--------------- */
 
-textarea.form-control{
-  width: 50%
+textarea.form-control {
+  width: 50%;
 }
 
-textarea{
+textarea {
   resize: vertical;
 }
 
@@ -24,30 +23,27 @@ textarea{
 
 /**------ Donations register--------*/
 
-
 /**---------Donations rerister END--------------- */
 
-
-
-
- 
-#logo{
+#logo {
   font-weight: medium;
   margin-right: 12px;
   font-size: 20px;
-	color: blue($color: #00ffff);
+  color: blue($color: #00ffff);
   font-family: $primary-font;
   padding: 80px 0px 50px 0px;
   vertical-align: middle;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
   font-family: $secondary-font;
   align-content: center;
 }
 
 nav {
-	height: 10px;
+  height: 10px;
 }
 
 .nav_links {
@@ -72,13 +68,13 @@ nav {
   width: 80%;
 }
 
-.post_header{
+.post_header {
   height: 64px;
   padding: 14px 24px;
   font-weight: 600;
 }
 
-.post_body{
+.post_body {
   padding: 10px 24px 0px 24px;
 }
 
@@ -89,20 +85,20 @@ label {
   font-weight: bold;
 }
 
-.comment_section.text{
+.comment_section.text {
   margin-left: 0px;
   margin-right: 300px;
   width: 150%;
 }
-.comment_text{
-  margin-left: 300px; 
+.comment_text {
+  margin-left: 300px;
   margin-right: 300px;
   width: 50%;
 }
 
-.comment_button{
+.comment_button {
   width: 15%;
-  margin-left:300px;
+  margin-left: 300px;
 }
 .timestamp {
   color: #a5a7aa;
@@ -111,7 +107,7 @@ label {
 
 /*-----posts home end --- */
 
-.profile_header{
+.profile_header {
   height: 100%;
   padding: 60px 20px 0px;
   margin-bottom: 45px;
@@ -139,7 +135,7 @@ label {
 
 .user_edit_button {
   margin-top: 25px;
-  border-color: #818488;     
+  border-color: #818488;
   color: #818488;
   align-content: flex-end;
 }
@@ -148,7 +144,7 @@ label {
   border-radius: 60%;
   height: 150px;
   width: 150px;
-  align-content: center;  
+  align-content: center;
 }
 
 .prof_pic_small {
@@ -157,8 +153,8 @@ label {
   width: 28px;
 }
 
-.home{
- padding-left: 200px;
+.home {
+  padding-left: 200px;
 }
 
 /*@keyframes slider{
@@ -196,16 +192,16 @@ label {
 
 $footer-height: 45px;
 
-#container{
-  background: image-url('bg.jpg');
+#container {
+  background: image-url("bg.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   line-height: 30px;
   font-size: 20px;
   color: white;
   opacity: 1;
-  margin:0px 0px $footer-height 0px;
-  padding: 180px 0px 50px 0px ;
+  margin: 0px 0px $footer-height 0px;
+  padding: 180px 0px 50px 0px;
   text-align: center;
   height: auto;
 }
@@ -213,7 +209,7 @@ $footer-height: 45px;
 .footer {
   height: $footer-height;
 }
-.icon{
+.icon {
   color: white;
   width: 16px;
   height: 16px;
@@ -222,19 +218,23 @@ $footer-height: 45px;
 #tag_cloud {
   width: 400px;
   line-height: 1.6em;
-  .s { font-size: 0.8em; }
-  .m { font-size: 1.2em; }
-  .l { font-size: 1.8em; }
+  .s {
+    font-size: 0.8em;
+  }
+  .m {
+    font-size: 1.2em;
+  }
+  .l {
+    font-size: 1.8em;
+  }
 }
 /*---Shared ideas--- */
-.idea_comment.text{
+.idea_comment.text {
   width: 150%;
-  margin-right:150%;
+  margin-right: 150%;
   margin-left: 0px;
-
 }
-.idea_comment.button{
+.idea_comment.button {
   width: 10%;
 }
 /*---Shared ideas end--- */
-
