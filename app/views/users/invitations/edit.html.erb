@@ -1,0 +1,59 @@
+<h2>Set Your Account!</h2>
+
+<%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put } do |f| %>
+  <%= devise_error_messages! %>
+  <%= f.hidden_field :invitation_token, readonly: true %>
+
+  <% if f.object.class.require_password_on_accepting %>
+    <div class="field">
+    <%= f.label :FirstName %><br />
+    <%= f.text_field :firstname, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :LastName %><br />
+    <%= f.text_field :lastname, autofocus: true %>
+  </div>
+
+  
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :RollNumber %><br />
+    <%= f.text_field :roll_number, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Faculty %><br />
+    <%= f.select :faculty, ['BCSIT','SNC','BCE','BEX'], :prompt => 'Select Faculty', autofocus: true %>
+  </div>
+
+  <div class="field">
+  <%= f.label :Batch %><br />
+  <%= f.select :batch, ['071','072','073','074'], :prompt => 'Select Batch', autofocus: true %>
+</div>
+
+<div class="field">
+    <%= f.label :PhoneNumber %><br />
+    <%= f.text_field :phone_number, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Address %><br />
+    <%= f.text_field :address, autofocus: true %>
+  </div>
+  <% end %>
+
+  <p><%= f.submit 'Submit'%></p>
+<% end %>

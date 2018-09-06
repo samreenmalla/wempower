@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>
+            Search
+        </title>
+        <style>
+            h4 {display: inline;}
+        </style>
+    </head>
+
+<body>
+
+<! -- Search Disease -->
+
+<div class = container>
+    <div class="row">
+        <div class = "col-md-8 searchbox">
+            <input type="text" id="searchterm" />
+            <button class="btn btn-primary" onclick="myJsFunction()">search</button>
+        </div>
+    </div>
+</div>
+
+<! -- Search Disease End -->
+
+<! -- Space to display content  -->
+    <h1 id = "disease_name"></h1>
+    <h2 id = "facts"> </h2>
+
+<!-- DISEASE FACTS -->
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-md-8">
+                 <p id = "disease_facts"> </p>
+            </div>
+        </div>
+    </div>
+
+<!-- DISEASE SYMPTOMS -->
+    <h2 id = "symptoms">  </h2>
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-md-8">
+              <p id= "disease_symptoms"></p>
+            </div>
+        </div>
+    </div>
+
+<!-- DISEASE TRANSMISSION -->
+    <h2 id = "transmission">  </h2>
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-md-8">
+                <p id= "disease_transmission"></p>
+            </div>
+        </div>
+    </div>
+
+<! -- Space to display content END -->
+
+
+
+ <script type="text/javascript">
+    function myJsFunction() {
+        var text = document.getElementById('searchterm').value;
+        console.log(text)
+        var URL = `https://disease-info-api.herokuapp.com/diseases/${text}`
+        
+        fetch(URL)
+            .then(response => response.json())
+                .then((res) => {
+
+                    /** PARSE DATA */
+                    var disease_name = res.disease.name;
+                    var disease_facts = res.disease.facts;
+                    var disease_symptoms = res.disease.symptoms;
+                    var disease_transmission = res.disease.transmission;
+
+                    /** SEND TO VIEW */
+                    document.getElementById("disease_name").innerHTML = disease_name;
+                    document.getElementById("disease_facts").innerHTML = disease_facts;
+                    document.getElementById("disease_symptoms").innerHTML = disease_symptoms;
+                    
+                    if(disease_transmission){
+                        document.getElementById("disease_transmission").innerHTML = disease_transmission;
+                    }
+
+                    /** PUSH TITLES*/
+                    document.getElementById("facts").innerHTML = "Facts";
+                    document.getElementById("symptoms").innerHTML = "Symptoms";
+
+                    if(disease_transmission){
+                        document.getElementById("transmission").innerHTML = "Transmission";
+                    }
+                })
+            .catch(err => {
+                    console.log(err)
+            })
+    }
+</script>

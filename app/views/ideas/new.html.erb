@@ -1,0 +1,14 @@
+<%= form_for @idea do |f| %>
+  <%= f.label :Idea %>
+  <%= f.text_field :description%> </br> </br>
+  <div class =" row">
+    <div class = "col-md-6">
+      <%= f.label :tag_list, "Tags (separated by commas)" %>
+      <%= f.text_field :tag_list %>
+      <%#<%= render 'form', f: f%>
+      </br></br>
+      <%= f.submit 'Share', class: 'btn btn-primary'%>
+
+    </div>
+  <div>
+<% end %>

@@ -1,0 +1,5 @@
+<%= simple_form_for @post do |f| %> 
+  <%= f.input :photo %>
+  <%= f.input :caption %>
+	<%= f.submit 'Post', class: 'btn btn-primary',:style => "margin-right: 300px;width: 10%"%>
+<% end %>
